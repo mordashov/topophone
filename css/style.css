@@ -14,6 +14,11 @@
     background-color: #f7f2f2;
 }
 
+.nav {
+    width: 64%;
+    margin-right: 20px;
+}
+
 .main-menu {
     display: flex;
     align-items: center;
@@ -26,7 +31,6 @@
     display: flex;
     margin: 0;
     padding: 0;
-    width: 705px;
     justify-content: space-between;
 }
 
@@ -61,10 +65,11 @@
 }
 .main-menu-search-container {
     display: flex;
+    /*width: 36%;*/
 }
 .main-menu-search {
     display: flex;
-    max-width: 200px;
+    /*width: 18%;*/
     height: 35px;
     padding-left: 13px;
     box-sizing: border-box;
@@ -81,9 +86,10 @@
 
 .button-search {
     display: flex;
+    /*width: 12%;*/
     flex-wrap: nowrap;
     padding-right: 15px;
-    max-width: 143px;
+    /*max-width: 143px;*/
     height: 35px;
     margin-left: -20px;
     align-items: center;
@@ -191,8 +197,8 @@
 }
 
 .banner {
-    max-width: 375px;
-    width: 100%;
+    /*max-width: 375px;*/
+    width: 33%;
     height: 350px;
     background: #fbad41;
 }
@@ -218,15 +224,16 @@
 .banner-button a { text-decoration: none;}
 
 .banner-image {
-    max-width: 375px;
-    width: 100%;
+    /*max-width: 375px;*/
+    width: 33%;
     height: 350px;
     background-image: url(../images/iphone8_red_large.png);
 }
 
 /* Предложения */
 .offer {
-    max-width: 367px;
+    /*max-width: 367px;*/
+    width: 32%;
     height: 163px;
     margin-left: 20px;
     font-size: 23px;
@@ -460,7 +467,7 @@
 }
 
 .interesting {
-    max-width: 265px;
+    width: 265px;
     padding-top: 30px;
 }
 
@@ -648,88 +655,173 @@
 @media screen and (min-width: 1140px) {
     .container { max-width: 1140px; }
 }
-@media screen and (max-width: 1140px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) {
     .container {
-        max-width: 1100px;
-        padding: 0 20px;
+        width: 97%;
+        /*padding: 0 20px;*/
     }
 
     .header-background,
     .subscribe-background,
     .popular-background,
     .footer { 
-        max-width: 1140px;
         width: 100%;
     }
 
-    .banner { width: 86%; }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .container {
-        max-width: 768px;
-        margin: 0;
-        padding: 0 20px;
-    }
-
-    .header-background,
-    .subscribe-background,
-    .popular-background,
-    .footer { 
-        max-width: 768px;
-    }
-
-    .main-menu-list {
-        width: 768px;
-    }
-    .main-menu-search-container {
-        display: none;
-    }
     .info-city {
-        display: none;
+        width: 100px;
+        margin: 10px 30px 0 60px;
     }
-    .info-button {
-        display: none;
-    }
+
+    /*.info-logo {
+        width: 75%;
+    }*/
+
+    .banner { width: 67%; }
+    .banner-image { width: 33%; }
     .offer {
         display: none;
     }
-    .popular-title {
-        display: none;
-    }
-    .interesting-title {
-        display: none;
+
+    .catalog {
+        width: 310px;
     }
 
-    .subscribe-container {
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .popular {
+        width: 230px;
     }
 
-    .subscribe-email {
-        max-width: 500px;
-        margin-left: 0;
-        width: 100%;
+    .popular-name {
+        font-size: 16px;
     }
 
-    .subscribe-text {
-        max-width: 768px;
-        width: 100%;
-    }
-
-    .footer-logo {
-        display: none;
-    }
-
-    .footer-сopyright {
-        font-size: 18px;
+    .interesting {
+        width: 220px;
     }
     
 }
 
-/*@media screen and (min-width: 750px) and (max-width: 768px) {
+@media screen and (max-width: 986px) {
+    .info-button {
+        display: none;
+    }
+
+    .catalog {
+        width: 280px;
+    }
+
+    .popular {
+        width: 210px;
+        font-size: 30px;
+    }
+
+    .popular-name {
+        font-size: 16px;
+    }
+
+    .interesting {
+        width: 200px;
+    }
+
+    .interesting-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 902px) {
+
+    .catalog {
+        width: 260px;
+    }
+
+    .popular {
+        width: 180px;
+        font-size: 30px;
+    }
+
+    .popular-name {
+        font-size: 16px;
+    }
+
+    .interesting {
+        width: 170px;
+    }
+
+    .interesting-title {
+        font-size: 30px;
+    }
+
+}
+
+    @media screen and (max-width: 768px) {
+
+        .container {
+            max-width: 768px;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .header-background,
+        .subscribe-background,
+        .popular-background,
+        .footer {
+            max-width: 768px;
+        }
+
+        .main-menu-list {
+            width: 768px;
+        }
+
+        .main-menu-search-container {
+            display: none;
+        }
+
+        .info-city {
+            display: none;
+        }
+
+        .info-button {
+            display: none;
+        }
+
+        .offer {
+            display: none;
+        }
+
+        .popular-title {
+            display: none;
+        }
+
+        .interesting-title {
+            display: none;
+        }
+
+        .subscribe-container {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .subscribe-email {
+            max-width: 500px;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .subscribe-text {
+            max-width: 768px;
+            width: 100%;
+        }
+
+        .footer-logo {
+            display: none;
+        }
+
+        .footer-сopyright {
+            font-size: 18px;
+        }
+    }
+
+    /*@media screen and (min-width: 750px) and (max-width: 768px) {
 
     .container {
         max-width: 750px !important;
