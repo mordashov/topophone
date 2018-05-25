@@ -50,10 +50,7 @@
     border-bottom: #fbad41 solid 4px;
 }
 
-.menuToggle{  
-    color: #fff;
-    padding: 10px 15px;
-    cursor: pointer;
+.main-menu-burger{  
     display: none;
 }
 
@@ -855,20 +852,28 @@
         padding-bottom: 0;
     }
 
-    .menuToggle {
-        display: block;
+    /*.main-menu {
+        margin-left: -5px;
+    }*/
+
+    /*Бургер меню*/
+    .main-menu-burger {
+        display: flex;
+        height: 45px;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
     }
 
     .main-menu-list {
         display: none;
         position: absolute;
-        background: #3e2597;
+        margin-left: -6px;
+        padding-left: 5px;
+        background: #f7f2f2;
         width: 100%;
-        margin-left: -10px;
-        padding-left: 10px;
     }
-
-    
 }
 
     /*@media screen and (max-width: 768px) {
