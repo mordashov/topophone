@@ -50,6 +50,13 @@
     border-bottom: #fbad41 solid 4px;
 }
 
+.menuToggle{  
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+}
+
 .main-menu li a {
     text-decoration: none;
     color: #131313;
@@ -847,6 +854,21 @@
         margin-top: 30px;
         padding-bottom: 0;
     }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .main-menu-list {
+        display: none;
+        position: absolute;
+        background: #3e2597;
+        width: 100%;
+        margin-left: -10px;
+        padding-left: 10px;
+    }
+
+    
 }
 
     /*@media screen and (max-width: 768px) {
