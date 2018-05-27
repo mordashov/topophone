@@ -380,10 +380,11 @@
     background: #ffffff;
 }
 
-.popular p {
+/*.popular p {
     margin: 0;
     padding: 0;
-}
+    width: 70%;
+}*/
 
 .popular:not(.popular-title):hover {
     color: #fbad41;
@@ -405,12 +406,24 @@
 }
 
 .popular-name {
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     line-height: 25px;
+    width: 100%;
+
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    padding: 5px; /* Поля */
+    text-overflow: ellipsis; /* Многоточие */
 }
 
 
+
+
 .popular-price {
+    margin: 0;
+    padding: 0;
     font-size: 22px;
     align-self: flex-end;
     color: #131313;
@@ -454,7 +467,7 @@
 /* Интересное */
 .interesting-container {
     display: flex;
-    height: 300px;
+    min-height: 300px;
     justify-content: space-between;
 }
 
@@ -480,7 +493,7 @@
 }
 
 .interesting img {
-    max-width:100%;
+    width:100%;
 }
 
 /* Подписка */
@@ -729,7 +742,7 @@
     }
 
     .interesting-container {
-        height: 350px;
+        width: auto;
         flex-wrap: wrap;
     }
 
@@ -800,8 +813,23 @@
         width: 17%;
     }
 
+
     .footer-container {
         font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .footer-navigation {
+        width: auto;
+    }
+
+    .footer-information {
+        width: auto;
+    }
+    .footer-contacts {
+        width: auto;
     }
 
 }
@@ -811,50 +839,6 @@
     .main-menu {
         margin-bottom: 20px;
     }
-
-    .banner-image {
-        display: none;
-    }
-
-    .info {
-        display: none;
-    }
-
-    .catalog-container {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .catalog {
-        width: 33%
-    }
-
-    .popular-container {
-        height: 1000px;
-        justify-content: space-between;
-    }
-
-    .popular {
-        width: 35%;
-        height: 400px;
-        margin-top: 0;
-    }
-
-    .popular-picture {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .popular-title {
-        width: 100%;
-        height: 50px;
-        margin-top: 30px;
-        padding-bottom: 0;
-    }
-
-    /*.main-menu {
-        margin-left: -5px;
-    }*/
 
     /*Бургер меню*/
     .main-menu-burger {
@@ -874,89 +858,155 @@
         background: #f7f2f2;
         width: 100%;
     }
-}
 
-    /*@media screen and (max-width: 768px) {
+    .main-menu-search-container {
+        display: flex;
+    }
 
-        .container {
-            max-width: 768px;
-            margin: 0;
-            padding: 0 20px;
-        }
+    .banner {
+        width: 70%;
+    }
 
-        .header-background,
-        .subscribe-background,
-        .popular-background,
-        .footer {
-            max-width: 768px;
-        }
+    .banner-image {
+        width: 30%;
+    }
 
-        .main-menu-list {
-            width: 768px;
-        }
-
-        .main-menu-search-container {
-            display: none;
-        }
-
-        .info-city {
-            display: none;
-        }
-
-        .info-button {
-            display: none;
-        }
-
-        .offer {
-            display: none;
-        }
-
-        .popular-title {
-            display: none;
-        }
-
-        .interesting-title {
-            display: none;
-        }
-
-        .subscribe-container {
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .subscribe-email {
-            max-width: 500px;
-            margin-left: 0;
-            width: 100%;
-        }
-
-        .subscribe-text {
-            max-width: 768px;
-            width: 100%;
-        }
-
-        .footer-logo {
-            display: none;
-        }
-
-        .footer-сopyright {
-            font-size: 18px;
-        }
-    }*/
-
-    /*@media screen and (min-width: 750px) and (max-width: 768px) {
-
-    .container {
-        max-width: 750px !important;
-        padding: 0 20px;
+    .info {
+        display: none;
     }
 
     .catalog-container {
-        flex-wrap: wrap !important;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .catalog {
+        width: 48%
+    }
+
+    .popular-container {
+        height: 1000px;
+        justify-content: space-between;
+    }
+
+    .popular {
+        width: 48%;
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .popular-picture {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .popular-title {
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .interesting-container {
+        /*min-height: 690px;*/
+        justify-content: space-between;
+    }
+
+    .interesting-title {
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .interesting {
+        width: 48%;
+    }
+
+    .subscribe-email {
+        width: 50%;
+    }
+
+    .subscribe-button {
+        min-width: 120px;
     }
 
 }
 
-@media screen and (max-width: 600px) {
-    
-}*/
+@media screen and (max-width: 740px) {
+
+    .popular-name {
+        white-space: nowrap; /* Отменяем перенос текста */
+        overflow: hidden; /* Обрезаем содержимое */
+        padding: 5px; /* Поля */
+        text-overflow: ellipsis; /* Многоточие */
+    }
+
+    .subscribe-container {
+        display: none;
+    }
+
+    .footer-container {
+        display: none;
+    }
+
+    .footer-сopyright {
+        background-color: #3d4144;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .footer-сopyright-text {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .main-menu-search-container {
+        display: none;
+    }
+
+    .banner-text {
+        font-size: 25px;
+    }
+
+    .catalog {
+        width: 100%;
+    }
+
+    .popular-container {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .popular {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .popular-background {
+        padding-bottom: 10px;
+    }
+
+
+    .interesting-title-text,
+    .popular-title-text {
+        font-size: 20px;
+    }
+
+    .interesting {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        width: 100%;
+    }
+    .banner-image {
+        display: none;
+    }
+}
