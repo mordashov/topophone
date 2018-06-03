@@ -1,32 +1,11 @@
-﻿<?php get_header(); ?>    
+<?php
+/*
+Template Name: index
+*/
+?>
+<?php get_header(); ?>    
 <section>
         <div class="container">
-
-            <!-- Информационный блок -->
-            <div class="info">
-                <div class="info-logo" onclick="location.href='index.html';" style="cursor: pointer;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-logo.png" />
-                    <p class="info-logo-text">Топофон<span>Магазин смартфонов</span></p>
-                </div>
-                <div class="info-city">
-                    Нижний Новгород
-                </div>
-                <div class="info-button">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-call.png" />
-                </div>
-                <div class="info-contacts">
-                    <p>Ежедневно с 11.00 до 22.00</p>
-                    <tel>+7 (999) 999-99-99</tel>
-                    <a href="#">Перезвоните мне</a>
-                </div>
-                <div class="info-button">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-basket.png" />
-                </div>
-                <div class="info-basket" onclick="location.href='#';" style="cursor: pointer;">
-                    <p>В корзине<br />1 товар</p>
-                </div>
-            </div>
-
             <!-- Баннер -->
             <div class="banner-container">
                 <div class="banner">

@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?> >
     <header>
         <div class="header-background">
             <div class="container">
@@ -17,11 +17,37 @@
                     <nav class="nav">
                         <div class="main-menu-burger">Меню</div>
                         <?php
-                        wp_nav_menu( array( 
-                            'menu_class' => 'main-menu-list',
-                            'menu_id' => false,
-                            'theme_location' => 'my-custom-menu', 
-                            'container_class' => 'main-menu-list' ) ); 
+                        //wp_nav_menu( array( 
+                        //    'menu'			  => '',              // (string) Название выводимого меню (указывается в админке при создании меню, приоритетнее 
+                        //                                          // чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
+                        //    'container'       => '',              // (string) Контейнер меню. Обворачиватель ul. Указывается тег контейнера (по умолчанию в тег div)
+                        //    'container_class' => '',              // (string) class контейнера (div тега)
+                        //    'container_id'    => '',              // (string) id контейнера (div тега)
+                        //    'menu_class'      => 'main-menu-list',          // (string) class самого меню (ul тега)
+                        //    'menu_id'         => '',              // (string) id самого меню (ul тега)
+
+
+                        //    ) ); 
+
+                        wp_nav_menu( array(
+	                        'theme_location'  => 'top',
+	                        'menu'            => 'top', 
+	                        'container'       => false, 
+	                        'container_class' => '', 
+	                        'container_id'    => '',
+	                        'menu_class'      => 'main-menu-list', 
+	                        'menu_id'         => '',
+	                        'echo'            => true,
+	                        'fallback_cb'     => '__return_empty_string',
+	                        'before'          => '',
+	                        'after'           => '',
+	                        'link_before'     => '',
+	                        'link_after'      => '',
+	                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	                        'depth'           => 0,
+	                        'walker'          => '',
+                        ) );
+
                         ?>
                         <!--<ul class="main-menu-list">
                             <li class="main-menu-list-item"><a href="index.html">Главная</a></li>
@@ -41,4 +67,30 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+
+		<!-- Информационный блок -->
+            <div class="info">
+                <div class="info-logo" onclick="location.href='index.html';" style="cursor: pointer;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-logo.png" />
+                    <p class="info-logo-text">Топофон<span>Магазин смартфонов</span></p>
+                </div>
+                <div class="info-city">
+                    Нижний Новгород
+                </div>
+                <div class="info-button">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-call.png" />
+                </div>
+                <div class="info-contacts">
+                    <p>Ежедневно с 11.00 до 22.00</p>
+                    <tel>+7 (999) 999-99-99</tel>
+                    <a href="#">Перезвоните мне</a>
+                </div>
+                <div class="info-button">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/info-basket.png" />
+                </div>
+                <div class="info-basket" onclick="location.href='#';" style="cursor: pointer;">
+                    <p>В корзине<br />1 товар</p>
+                </div>
+            </div>
     </header>
