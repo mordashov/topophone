@@ -10,7 +10,7 @@ while( have_posts() ) : the_post();
 	the_content(); // выводим контент
 endwhile;
 //Подвал
-echo "</section>";
 echo "</div>";
+echo "</section>";
 get_footer(); 
 ?>

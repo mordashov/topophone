@@ -30,4 +30,11 @@ function set_custom_class( $classes, $item, $args, $depth ){
     
 return $classes;
 }
+
+/* thumbnails */ 
+if (function_exists( 'add_theme_support' ) ) { 
+    add_theme_support( 'post-thumbnails' ); 
+    add_image_size(350, 250 , true );        
+} 
+ 
 ?>

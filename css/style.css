@@ -682,6 +682,39 @@
     line-height: 30px;
 }
 
+/*Стили для интересного*/
+
+.exciting-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.exciting-item-link {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #fbad41;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.exciting-item-image {
+    width: 30%;
+    height: 100%;
+    margin: 0 5% 30px 0;
+}
+
+.exciting-item-text {
+    display: flex;
+    width: 65%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+}
 
 /* RESPONSIVE */
 @media screen and (min-width: 1140px) {
@@ -1016,6 +1049,10 @@
         width: 100%;
         height: auto;
     }
+
+    .exciting-item-image { width: 70%; }
+
+    .exciting-item-text { width: 100%;  }
 }
 
 @media screen and (max-width: 480px) {
