@@ -716,6 +716,30 @@
     padding: 0;
 }
 
+
+.exciting-item-post {
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+.exciting-item-image-post {
+    float: left;
+    width: 40%;
+    height: 40%;
+    margin: 0 40px 20px 0;
+}
+
+.exciting-item-text-post {
+    display: block;
+    width: 100%;
+}
+
+/*.exciting-item-text-post img {
+    display: block;
+        float: none;
+}*/
+
 /* RESPONSIVE */
 @media screen and (min-width: 1140px) {
     .container { max-width: 1140px; }
